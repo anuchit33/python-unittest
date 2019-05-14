@@ -18,5 +18,5 @@ def Fuzzbuzz(x):
     return result
 
 if __name__ == "__main__":
-    x = input("Number = ")
+    x = int(input("Number = "))
     print("Fuzzbuzz(%s) : %s" % (x,Fuzzbuzz(x)))
