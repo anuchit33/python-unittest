@@ -9,8 +9,6 @@ def Tax(net):
     if (type(net) is not float and type(net) is not int ) or net < 0:
         return "Input Error!"
     
-
-
     tax = float(0)
     net =  float(net)
 
