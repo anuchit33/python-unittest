@@ -7,8 +7,10 @@ def Gameoflife(arr):
 
     # center char
     c = arr[1][1]
-    l = checkAround(c,arr)-1
-    if (c =='L' and (l == 2 or l == 3)) or (c == 'D' and (l == 3)):
+    l = checkAround('L',arr)
+    if c == 'L':
+        l = l - 1
+    if ((c == 'L' and (l == 2 or l == 3))) or (c == 'D' and (l == 3)):
         result = 'Becomes alive!'
     return result
 
