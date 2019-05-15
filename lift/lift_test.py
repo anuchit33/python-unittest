@@ -65,7 +65,7 @@ class TestLift(unittest.TestCase):
 
         self.assertEqual('DOWN', lift.getStatus())
 
-    def test_lift_select_floor_not_valid_and_status_stop(self):
+    def test_lift_select_floor_isnot_valid_and_status_stop(self):
         # floor_max = 100, current_floor = 1
         lift = Lift(current_floor=1,floor_max=100)
         
