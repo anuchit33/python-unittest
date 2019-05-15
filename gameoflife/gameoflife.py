@@ -1,6 +1,10 @@
 def Gameoflife(arr):
     result = 'Dies!'
 
+    # check size array
+    if not isinstance(arr,list) or len(arr)!=3 or len(arr[0])!=3 or len(arr[1])!=3 or len(arr[2])!=3:
+        return 'Error!'
+
     # center char
     c = arr[1][1]
     l = checkAround(c,arr)-1

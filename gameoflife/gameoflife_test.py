@@ -4,6 +4,17 @@ from gameoflife import Gameoflife
 
 class TestGameoflife(unittest.TestCase):
 
+    def test_not_array(self):
+        array = 1
+        self.assertEqual("Error!", Gameoflife(array))
+
+    def test_array_not_3d(self):
+        array = [
+                    ['D','D','L'],
+                    ['D','L'],
+                    ['D','D'],
+                ]
+        self.assertEqual("Error!", Gameoflife(array))
     
     def test_L_center_L_around_has_1(self):
         array = [
