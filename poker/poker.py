@@ -65,7 +65,7 @@ class Poker:
             s+=arr[i]
 
 
-    def win(result1,result2):
+    def winner(result1,result2):
         if Poker.CheckScore(result1) > Poker.CheckScore(result2):
             return 1
         elif Poker.CheckScore(result1) < Poker.CheckScore(result2):

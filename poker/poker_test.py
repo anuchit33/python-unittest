@@ -41,25 +41,25 @@ class TestPoker(unittest.TestCase):
         result = [2,3,1,4,6]
         self.assertEqual(1, Poker.CheckScore(result))
 
-    def test_check_win_score7_vs_score1 (self):
+    def test_check_p1win_score7_vs_score1 (self):
         result1 = [1,2,3,4,5]
         result2 = [2,3,1,4,6]
-        self.assertEqual(1, Poker.win(result1,result2))
+        self.assertEqual(1, Poker.winner(result1,result2))
 
-    def test_check_win_score1_vs_score7 (self):
+    def test_check_p2win_score1_vs_score7 (self):
         result1 = [2,3,1,4,6]
         result2 = [1,2,3,4,5]
-        self.assertEqual(2, Poker.win(result1,result2))
+        self.assertEqual(2, Poker.winner(result1,result2))
 
-    def test_check_win_score7_vs_score7 (self):
+    def test_check_alays_score7_vs_score7_totalp1_is_win (self):
         result1 = [6,2,3,4,5]
         result2 = [1,2,3,4,5]
-        self.assertEqual(1, Poker.win(result1,result2))
+        self.assertEqual(1, Poker.winner(result1,result2))
     
     def test_check_always(self):
         result1 = [6,2,3,4,5]
         result2 = [6,2,3,4,5]
-        self.assertEqual(0, Poker.win(result1,result2))
+        self.assertEqual(0, Poker.winner(result1,result2))
 
 if __name__ == '__main__':
     unittest.main()
