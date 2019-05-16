@@ -64,6 +64,33 @@ class TestTictactoe(unittest.TestCase):
         ]
         self.assertEqual("X is Winner!", Tictactoe().getStatus(grid))
 
+    def test_win_colum1(self):
+        o = 1
+        x = 2
+        grid = [
+            [x,0,0],
+            [x,o,0],
+            [x,o,o]
+        ]
+        self.assertEqual("X is Winner!", Tictactoe().getStatus(grid))
+    def test_win_colum2(self):
+        o = 1
+        x = 2
+        grid = [
+            [o,x,o],
+            [0,x,0],
+            [o,x,o]
+        ]
+        self.assertEqual("X is Winner!", Tictactoe().getStatus(grid))
+    def test_win_colum3(self):
+        o = 1
+        x = 2
+        grid = [
+            [x,0,o],
+            [o,x,o],
+            [x,o,o]
+        ]
+        self.assertEqual("O is Winner!", Tictactoe().getStatus(grid))
     def test_stopped(self):
         o = 1
         x = 2

@@ -37,15 +37,22 @@ class Tictactoe():
 
     def getStatus(self,grid):
         status = ''
+        # backslash
         if grid[0][0] != 0 and grid[1][1] == grid[0][0] and grid[0][0] == grid[2][2]:
             status = self.player[grid[0][0]-1]
-
+        # slash
         if grid[0][2] != 0 and grid[1][1] == grid[0][2] and grid[0][2] == grid[2][0]:
             status = self.player[grid[0][2]-1]
 
+        # row
         for i in range(0,3):
             if grid[i][0] != 0 and grid[i][0] == grid[i][1] and grid[i][0] == grid[i][2]:
                 status = self.player[grid[i][0]-1]
+                break
+        # colum
+        for i in range(0,3):
+            if grid[0][i] != 0 and grid[0][i] == grid[1][i] and grid[0][i] == grid[2][i]:
+                status = self.player[grid[0][i]-1]
                 break
 
         if status == '':
